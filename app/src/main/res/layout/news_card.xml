@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/card_margin"
+    android:padding="@dimen/card_padding"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/card_corner_radius"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/main_relative_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/headline_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        style="@style/HeadlineTextViewStyle"
+        tools:text="headline_text_view" />
+
+    <LinearLayout
+        android:layout_below="@+id/headline_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/card_margin"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/card_view_relative_layout"
+            style="@style/SectionAuthorDateStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_section_margin"
+            android:layout_marginBottom="@dimen/card_section_margin"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/section_text_view"
+                style="@style/SectionTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                tools:text="section" />
+
+            <TextView
+                android:id="@+id/author_text_view"
+                style="@style/AuthorTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="79dp"
+                tools:text="author" />
+
+            <TextView
+                android:id="@+id/time_text_view"
+                style="@style/DateTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/author_text_view"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                tools:text="Time" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/card_image_view"
+            android:layout_width="@dimen/thumbnail_image_width"
+            android:layout_height="@dimen/thumbnail_image_height"
+            android:contentDescription="@string/news_thumbnail"
+            style="@style/SectionThumbnailStyle"/>
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

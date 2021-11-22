@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Change Action Bar title text color  -->
+        <item name="titleTextColor">@color/titleTextColor</item>
+        <item name="subtitleTextColor">@color/subtitleTextColor</item>
+
+        <!-- Set Navigation drawer icon color-->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+        <!-- Change Action Bar overflow icon (Options Menu button) color -->
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Theme of the settings -->
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Set Navigation drawer icon color -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/pink_200</item>
+    </style>
+
+    <!-- Change Action Bar overflow icon (Options Menu button) color -->
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/pink_200</item>
+    </style>
+
+    <!-- Style for a tab that displays a category name -->
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/white</item>
+        <item name="tabIndicatorColor">@color/pink_200</item>
+        <item name="tabSelectedTextColor">@color/pink_700</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabIndicatorHeight">3dp</item>
+    </style>
+
+    <!-- Text appearance style for a category tab -->
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for headline TextView-->
+    <style name="HeadlineTextViewStyle">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingStart">@dimen/padding</item>
+        <item name="android:fontFamily">Exo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for Section, Author, and Date TextView -->
+    <style name="SectionAuthorDateStyle">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingStart">@dimen/padding</item>
+        <item name="android:fontFamily">Exo</item>
+    </style>
+
+    <!-- Style for section TextView -->
+    <style name="SectionTextViewStyle" parent="@style/SectionAuthorDateStyle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/color_section</item>
+    </style>
+
+    <!-- Style for Author TextView -->
+    <style name="AuthorTextViewStyle" parent="@style/SectionAuthorDateStyle">
+        <item name="android:textColor">@color/color_author</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <!-- Style for Date TextView -->
+    <style name="DateTextViewStyle" parent="@style/SectionAuthorDateStyle">
+        <item name="android:textColor">@color/color_date_text</item>
+    </style>
+
+    <!-- Style for Thumbnail -->
+    <style name="SectionThumbnailStyle">
+        <item name="android:paddingRight">@dimen/padding</item>
+        <item name="android:paddingEnd">@dimen/padding</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+</resources>
